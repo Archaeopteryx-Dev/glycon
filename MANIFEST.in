@@ -1,0 +1,8 @@
+include LICENSE.md
+include README.md
+recursive-include glycon/static *
+recursive-include glycon/templates *
+recursive-include glycon/themes *
+recursive-include glycon_summaries/templates *
+recursive-include glycon_menu_blocks/templates *
+recursive-include docs *

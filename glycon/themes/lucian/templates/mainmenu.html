@@ -1,0 +1,9 @@
+<div id="main-menu" class="navigation">
+    <h2 class="element-invisible">Main menu</h2>
+    <ul id="main-menu-links" class="links clearfix">
+        <li class="menu first"><a href="/">Home</a></li>
+        {% for menuitem in menu %}
+        <li class="menu"><a href="{{ menuitem.link_url }}" title="">{{ menuitem.short_name }}</a></li>
+        {% endfor %}
+    </ul>
+</div> <!-- /#main-menu -->

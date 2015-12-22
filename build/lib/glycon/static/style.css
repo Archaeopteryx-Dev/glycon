@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+}
+
+p {
+    margin: 0px 0px 1.2em;
+}
+
+body {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    line-height: 1.5;
+    font-size: 87.5%;
+    word-wrap: break-word;
+}
+
+#page {
+    width: 100%;
+    float: left;
+}
+
+#page-inner {
+    margin: auto;
+    width: 960px;
+}
+
+#header {
+    width: 100%;
+    float: left;
+    background-image: url("/static/background.png");
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+#header-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+#main-menu {
+    clear: both;
+}
+
+#main-menu-links {
+    margin: 0px;
+    padding: 0px 15px;
+}
+
+#main-menu-links li {
+    float: left;
+    list-style: outside none none;
+    padding: 0px 1px;
+    margin: 0px 1px;
+}
+
+#main-menu-links a {
+    color: #333;
+    background: rgba(255, 255, 255, 0.7) none repeat scroll 0% 0%;
+    float: left;
+    height: 2.4em;
+    line-height: 2.4em;
+    padding: 0px 0.8em;
+    text-decoration: none;
+    text-shadow: 0px 1px #EEE;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+ul.links {
+    color: #68696B;
+    font-size: 0.821em;
+}
+
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+}
+
+#main-menu-links li {
+    float: left;
+    list-style: outside none none;
+    padding: 0px 1px;
+    margin: 0px 1px;
+}
+
+menu-links li a.active, #main-menu-links li.active-trail a {
+    background: #FFF none repeat scroll 0% 0%;
+}
+
+#sidebar-left {
+    width: 240px;
+    display: inline;
+    float: left;
+    position: relative;
+    font-size: 12.8px;
+    line-height: 1.4;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    overflow: auto;
+}
+
+#footer {
+    width: 100%;
+    background: #333;
+    color: #eee;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    float: left;
+}
+
+#footer-inner {
+    margin: auto;
+    width: 960px;
+}
+
+.inner-content {
+    margin: 10px;
+}
+
+.box {
+    background: #f6f6f2;
+}
+
+.figure {
+    float: left;
+    margin-right: 10px
+    margin-bottom: 10px;
+}

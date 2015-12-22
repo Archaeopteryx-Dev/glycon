@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block page %}
+
+<!-- Start of page content -->
+
+<div class="content inner-content">
+
+    <p>{{ content.body|safe|linebreaks }}</p>
+
+
+
+    <div class="summary-content">
+
+    {% for item in content.filter_items %}
+
+        <div class="summary-block">
+            <h2>
+                <a href="{{ item.link_url }}">{{ item.title }}</a>
+            </h2>
+
+            <div class="meta submitted">
+                Submitted by {{ item.author | capfirst }} on {{ item.create_dt}}
+            </div>
+
+            <div class="field-item even">
+                <a href="{{ item.link_url }}"><img src="{{ media }}{{ item.image_1 }}" alt="{{ item.title }}"/></a>
+            </div>
+
+            <div id="teaser" class="field-items">
+                <div class="field-item even"><p>{{item.teaser | safe }}</p></div>
+            </div>
+
+            <div id="readmore">
+                <a href="{{ item.link_url }}">Read more..</a>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    </div>
+
+</div>
+
+<!-- End of page content -->
+
+{% endblock %}

@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: glycon
+Version: 0.1.0.4
+Summary: A Django-based CMS.
+Home-page: https://www.bencollier.info/
+Author: Ben Collier
+Author-email: bmcollier@gmail.com
+License: GPL v3
+Description: README.md
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

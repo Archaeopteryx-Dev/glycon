@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+        "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+
+{% load staticfiles %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+      xmlns:fb="http://ogp.me/ns/fb#"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:article="http://ogp.me/ns/article#"
+      xmlns:book="http://ogp.me/ns/book#"
+      xmlns:profile="http://ogp.me/ns/profile#"
+      xmlns:video="http://ogp.me/ns/video#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/vnd.microsoft.icon"/>
+    <meta name="description" content="{{ content.teaser }}"/>
+    <meta name="generator" content="Glycon (http://www.bencollier.info)"/>
+    <link rel="canonical" href="{{ content.link_url_qualified }}"/>
+    <link rel="shortlink" href="{{ content.link_url_qualified }}"/>
+
+    {% include "metatags.html" %}
+
+    <!--<title>{{ content.title }} | {{ sitename }}</title>-->
+    <title>Ahahahaah!</title>
+
+</head>
+
+<body>
+
+<div id="header">
+    <div id="header-inner">
+
+        {% include "header.html" %}
+
+        {% include "mainmenu.html" %}
+
+    </div>
+</div> <!-- /.section, /#header -->
+
+<div id="page">
+    <div id="page-inner">
+
+        {% include "sidebar.html" %}
+
+        <div id="main" class="content-inner">
+
+            {% block page %}{% endblock %}
+
+        </div>
+
+    </div>
+</div> <!-- /#page, /#page-wrapper -->
+
+{% include "footer.html" %}
+
+{% include "bottom.html" %}
+
+</body>
+</html>

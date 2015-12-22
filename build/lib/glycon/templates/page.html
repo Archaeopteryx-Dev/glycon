@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block page %}
+
+<!-- Start of page content -->
+
+<div id="content" class="column">
+    <h1 class="title" id="page-title">{{ content.title }}</h1>
+    <div class="meta submitted">Added by <span class="username">{{ content.author|capfirst }}</span> on Tue, 05/26/2015 - 13:57</div>
+    <img src="{{ media }}{{ content.image_1 }}" width="270" height="480" alt="Yellow River Kingdom" class="figure" />
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">{{ content.body }}</div>
+
+    <div id="tags">
+        <h3 class="field-label">Tags: </h3>
+        <ul class="links">
+            <li class="tag"><a href="/tags/risc-os-pico">RISC OS Pico</a></li>
+            <li class="tag"><a href="/tags/featured">Featured</a></li>
+        </ul>
+    </div>
+
+    <div id="disqus_thread">
+        <noscript><p><a href="http://bencollier.disqus.com/?url=http%3A%2F%2Fwww.bencollier.info%2Fcontent%2Fgetting-yellow-river-kingdom-working-risc-os-pico">View the discussion thread.</a></p></noscript>
+    </div>
+</div>
+
+<!-- End of page content -->
+
+{% endblock %}

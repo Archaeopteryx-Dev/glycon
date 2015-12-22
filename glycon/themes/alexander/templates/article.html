@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page %}
+
+<!-- Start of page content -->
+
+<div id="content" class="column inner-content">
+
+    <h1 class="title" id="page-title">{{ content.title }}</h1>
+
+    <div class="meta submitted">Added by <span class="username">{{ content.author|capfirst }}</span> on {{ content.create_dt }}</div>
+
+    <img src="{{ media }}{{ content.image_1 }}" alt="{{ content.image_1.title }}" class="image-left" />
+    {{ content.body|safe|linebreaks }}
+
+    <div id="tags">
+        <h3 class="field-label">Tags: </h3>
+        <ul class="links">
+            {% for tag in content.tags.all %}
+            <li class="tag"><a href="{{ tag.text }}">{{ tag.text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="disqus_thread">
+        <noscript>
+            <p>
+                <a href="http://bencollier.disqus.com/?url=http%3A%2F%2Fwww.bencollier.info%2Fcontent%2Fgetting-yellow-river-kingdom-working-risc-os-pico">
+                    View the discussion thread.
+                </a>
+            </p>
+        </noscript>
+    </div>
+
+</div>
+
+<!-- End of page content -->
+
+{% endblock %}

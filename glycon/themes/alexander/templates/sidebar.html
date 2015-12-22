@@ -1,0 +1,10 @@
+<div id="sidebar-left" class="column sidebar">
+    <div class="inner-content box">
+
+            {% include "disqus.html" %}
+            {% include "twitter.html" %}
+            {% for block in regions.sidebar %}
+                <p>{{ block }}</p>
+            {% endfor %}
+    </div>
+</div>
