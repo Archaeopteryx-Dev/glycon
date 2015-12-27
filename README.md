@@ -59,15 +59,17 @@ From functions required for glycon home site:
 * Menu blocks - add menus to blocks DONE
 * Theme system - part of glycon core DONE
 * Add a summary block to glycon_summaries
+* Add configurable elements to a Theme (colours, background (upload to media), favicon (upload to media) etc.)
 * Multi-site config DONE
 * Finalise the Alexander and Lucian themes PARTIALLY DONE
 * Override the main admin index to describe the features of each class of the Glycon system, and add links etc. DONE
 
-Then add three more new modules:
+Then add four more new modules:
 
 	glycon_disqus
 	glycon_google_analytics
-	glycon_statcounter	
+	glycon_statcounter
+	glycon_vimeo
 
 Then we'll launch the Glycon web site, and create a video to show how to install it from scratch.
 
