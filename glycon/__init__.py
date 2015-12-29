@@ -107,6 +107,7 @@ def _current_theme(site):
     except:
         return None
 
+
 def template_directories(site):
     return [
         os.path.join(BASE_DIR, "glycon/templates"),

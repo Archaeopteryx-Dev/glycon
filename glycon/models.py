@@ -25,9 +25,14 @@ class PublishingMixin(models.Model):
 class Theme(models.Model):
     name = models.CharField(max_length=255)
     active = models.BooleanField(default=False)
-
-
-    #TODO: Post-save action to turn off other Themes if active set to True.
+    colour_1 = models.CharField(max_length=6, null=True, blank=True)
+    colour_2 = models.CharField(max_length=6, null=True, blank=True)
+    colour_3 = models.CharField(max_length=6, null=True, blank=True)
+    colour_4 = models.CharField(max_length=6, null=True, blank=True)
+    colour_5 = models.CharField(max_length=6, null=True, blank=True)
+    colour_6 = models.CharField(max_length=6, null=True, blank=True)
+    background_image = models.ImageField(blank=True, null=True)
+    logo_image = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.name

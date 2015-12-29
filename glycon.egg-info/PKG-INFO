@@ -2,7 +2,7 @@ Metadata-Version: 1.1
 Name: glycon
 Version: 0.1.0.4
 Summary: A Django-based CMS.
-Home-page: https://www.bencollier.info/
+Home-page: http://www.bencollier.info/
 Author: Ben Collier
 Author-email: bmcollier@gmail.com
 License: GPL v3

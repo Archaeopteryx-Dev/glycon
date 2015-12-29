@@ -2,6 +2,7 @@ LICENSE.md
 MANIFEST.in
 README.md
 setup.py
+bin/glycon-setup.py
 docs/README.md
 glycon/__init__.py
 glycon/admin.py

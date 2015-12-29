@@ -15,9 +15,10 @@ setup(
     license='GPL v3',
     description='A Django-based CMS.',
     long_description='README.md',
-    url='https://www.bencollier.info/',
+    url='http://www.bencollier.info/',
     author='Ben Collier',
     author_email='bmcollier@gmail.com',
+    scripts=['bin/glycon-setup.py'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

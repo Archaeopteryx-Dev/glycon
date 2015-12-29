@@ -63,6 +63,7 @@ From functions required for glycon home site:
 * Multi-site config DONE
 * Finalise the Alexander and Lucian themes PARTIALLY DONE
 * Override the main admin index to describe the features of each class of the Glycon system, and add links etc. DONE
+* Ensure themes pick up images from the correct media root
 
 Then add four more new modules:
 
