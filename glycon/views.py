@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.sites.shortcuts import get_current_site
+from django.contrib.sites.models import Site
 
-from glycon.models import BaseContent, Article, Page, Menu, MenuItem, Region, Block
+from glycon.models import BaseContent, Article, Page, Menu, MenuItem, Region, Block, SiteConfiguration
 from glycon.config import *
 
 
@@ -30,12 +31,15 @@ def content(request, page_name):
 
     template = "{}.html".format(contents.content_type.lower())
     menu = MenuItem.objects.filter(menu__name="Main")
+    current_site = Site.objects.get_current().id
+    logo = SiteConfiguration.objects.get(site__id=current_site).theme.logo_image
     return render(request, template, dict(
         menu=menu,
         content=contents,
         regions=regions,
         sitename=SITENAME,
-        media=GLYCON_MEDIA_URL
+        media=GLYCON_MEDIA_URL,
+        logo=logo
     ))
 
 def home(request):

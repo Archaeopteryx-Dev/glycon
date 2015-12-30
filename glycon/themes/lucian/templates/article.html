@@ -1,39 +1,96 @@
-{% extends 'base.html' %}
+<html>
+    <head>
+        <title>Glycon - a Python CMS - Powerful, Intuitive, and Fast</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
 
-{% block page %}
+    <body>
+        <div id="header">
+            <div id="header-left"><img src="glycon.png"/></div>
+            <div id="header-right">
+                <ul>
+                    <li><a href="">Quick Start</a></li>
+                    <li><a href="">Tutorials</a></li>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Consultancy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="divider">
+            <ul>
+                <li><a href="">Add-ons</a></li>
+                <li><a href="">Themes</a></li>
+                <li><a href="">Developers</a></li>
+                <li><a href="">Mailing List</a></li>
+                <li><a href="">Events</a></li>
+            </ul>
+        </div>
 
-<!-- Start of page content -->
+        <div id="main">
+            <div id="top">
+                <div id="main-left-top">
+                    <h5>Get a site online in ten minutes flat....</h5>
+                </div>
 
-<div id="content" class="column inner-content">
+                <div id="main-middle-top">
+                    <h5>Share and extend</h5>
+                </div>
 
-    <h1 class="title" id="page-title">{{ content.title }}</h1>
+                <div id="main-right-top">
+                    <h5>Latest News</h5>
+                </div>
+            </div>
 
-    <div class="meta submitted">Added by <span class="username">{{ content.author|capfirst }}</span> on {{ content.create_dt }}</div>
+            <div id="bottom">
+                <div id="main-left-bottom">
+                    <div class="tutorials-teaser">
+                        <b>Our tutorials and videos will help you to get going quickly with every aspect of Glycon.</b><br/><br/>
+                        <a href="">Deploy your new website in under ten minutes</a><br/>
+                        <div id="videos">
+                            <iframe src="https://player.vimeo.com/video/114298956" width="150" height="84" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/114298956" width="150" height="84" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/114298956" width="150" height="84" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/114298956" width="150" height="84" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
 
-    <img src="{{ media }}{{ content.image_1 }}" alt="{{ content.image_1.title }}" class="image-left" />
-    {{ content.body|safe|linebreaks }}
+                <div id="main-middle-bottom">
+                    <div class="addons">
+                        <b>Find a package to enhance your website in the Add-ons Library</b><br/><br/>
+                        <u>Latest Uploads</u><br/>
+                        <b>23-12-15 09:12</b>: <a href="">Statcounter Integration v0.4</a><br/>
+                        <b>23-12-15 05:16</b>: <a href="">Disqus Comments v0.1</a><br/>
+                        <b>22-12-15 12:12</b>: <a href="">Google Analytics v0.9</a><br/>
+                        <b>22-12-15 08:01</b>: <a href="">AddThis v0.4</a><br/>
+                        <b>21-12-15 02:15</b>: <a href="">Contact Forms v1.0</a><br/>
+                    </div>
+                </div>
 
-    <div id="tags">
-        <h3 class="field-label">Tags: </h3>
-        <ul class="links">
-            {% for tag in content.tags.all %}
-            <li class="tag"><a href="{{ tag.text }}">{{ tag.text }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div id="disqus_thread">
-        <noscript>
-            <p>
-                <a href="http://bencollier.disqus.com/?url=http%3A%2F%2Fwww.bencollier.info%2Fcontent%2Fgetting-yellow-river-kingdom-working-risc-os-pico">
-                    View the discussion thread.
-                </a>
-            </p>
-        </noscript>
-    </div>
-
-</div>
-
-<!-- End of page content -->
-
-{% endblock %}
+                <div id="main-right-bottom">
+                    <div class="news">
+                        <b>22nd December 2015, 2:36pm - Glycon v1.2 Released!</b><br/>
+                        We're proud to announce the release of the latest version of Glycon.
+                        For a full rundown of the new features, check out the <a href="">release notes</a>.<br/>
+                    </div>
+                    <div class="news">
+                        <b>22nd December 2015, 2:36pm - Glycon v1.2 Released!</b><br/>
+                        We're proud to announce the release of the latest version of Glycon.
+                        For a full rundown of the new features, check out the <a href="">release notes</a>.<br/>
+                    </div>
+                    <div class="news">
+                        <b>22nd December 2015, 2:36pm - Glycon v1.2 Released!</b><br/>
+                        We're proud to announce the release of the latest version of Glycon.
+                        For a full rundown of the new features, check out the <a href="">release notes</a>.<br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Test test test</p>
+        </div>
+    </body>
+</html>
