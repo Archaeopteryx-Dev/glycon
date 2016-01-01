@@ -1,62 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-        "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-
 {% load staticfiles %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
-      xmlns:fb="http://ogp.me/ns/fb#"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:article="http://ogp.me/ns/article#"
-      xmlns:book="http://ogp.me/ns/book#"
-      xmlns:profile="http://ogp.me/ns/profile#"
-      xmlns:video="http://ogp.me/ns/video#">
+<html>
+    <head>
+        <title>Glycon - a Python CMS - Powerful, Intuitive, and Fast</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
 
-<head profile="http://www.w3.org/1999/xhtml/vocab">
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/vnd.microsoft.icon"/>
-    <meta name="description" content="{{ content.teaser }}"/>
-    <meta name="generator" content="Glycon (http://www.bencollier.info)"/>
-    <link rel="canonical" href="{{ content.link_url_qualified }}"/>
-    <link rel="shortlink" href="{{ content.link_url_qualified }}"/>
-
-    {% include "metatags.html" %}
-
-    <!--<title>{{ content.title }} | {{ sitename }}</title>-->
-    <title>Ahahahaah!</title>
-
-</head>
-
-<body>
-
-<div id="header">
-    <div id="header-inner">
-
-        {% include "header.html" %}
-
-        {% include "mainmenu.html" %}
-
-    </div>
-</div> <!-- /.section, /#header -->
-
-<div id="page">
-    <div id="page-inner">
-
-        {% include "sidebar.html" %}
-
-        <div id="main" class="content-inner">
-
-            {% block page %}{% endblock %}
-
+    <body>
+        <div id="header">
+            <div id="header-left"><img src="{{ media }}{{ logo }}"/></div>
+            <div id="header-right">
+                {% include "mainmenu.html" %}
+            </div>
         </div>
+        {% block divider %}{% endblock %}
 
-    </div>
-</div> <!-- /#page, /#page-wrapper -->
+        <div id="main">
+            <div id="top">
 
-{% include "footer.html" %}
+                {% block main-left-top %}
+                <div id="main-left-top">
+                    {% for block in regions.left_heading %}
+                        <h5>{{ block }}</h5>
+                    {% endfor %}
+                </div>
+                {% endblock %}
 
-{% include "bottom.html" %}
+                {% block main-middle-top %}{% endblock %}
 
-</body>
+                {% block main-right-top %}
+                <div id="main-right-top">
+                    {% for block in regions.right_heading %}
+                        <h5>{{ block }}</h5>
+                    {% endfor %}
+                </div>
+                {% endblock %}
+
+            </div>
+
+            <div id="bottom">
+                {% block main-left-bottom %}
+                <div id="main-left-bottom">
+                    {% include "left-sidebar.html" %}
+                </div>
+                {% endblock %}
+
+                {% block main-middle-bottom %}{% endblock %}
+
+                {% block main-right-bottom %}
+                <div id="main-right-bottom">
+                    {% include "right-sidebar.html" %}
+                </div>
+                {% endblock %}
+            </div>
+        </div>
+        <div id="footer">
+            {% include 'footer.html' %}
+        </div>
+    </body>
 </html>

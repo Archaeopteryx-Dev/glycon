@@ -1,0 +1,6 @@
+<div class="summary-block">
+{% for item in block.filter_items %}
+    <b>{{ item.create_dt }}</b>&nbsp;&nbsp;<a href="{{ item.link_url }}">{{ item.title }}</a><br/>
+    <p>{{ item.teaser }}</p>
+{% endfor %}
+</div>

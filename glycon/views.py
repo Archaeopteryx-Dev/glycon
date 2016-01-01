@@ -24,7 +24,19 @@ def content(request, page_name):
     regions = {}
     for region in Region.objects.all():
         blocks = []
-        for block in region.blocks.order_by("weight"):
+
+        def b_id(s):
+            b = []
+            for all_blocks in s:
+                b.append(all_blocks.id)
+            return b
+
+        filtered_blocks = [block for block in region.blocks.order_by("weight") if
+                           page_name in block.all_pages and get_current_site(request).id in b_id(block.site.all())]
+
+        for block in filtered_blocks:
+            for all_blocks in block.site.all():
+                print(all_blocks.id)
             block_contents = BLOCK_TYPES[block.block_type].objects.filter(id=block.id).first()
             blocks.append(block_contents.content)
         regions[region.name] = blocks

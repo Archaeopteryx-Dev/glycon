@@ -137,6 +137,15 @@ class BaseBlock(models.Model):
     name = models.CharField(max_length=255)
     block_type = models.CharField(max_length=255)
     weight = models.IntegerField(default=1)
+    pages = models.TextField(null=True, blank=True)
+    site = models.ManyToManyField(Site, blank=True)
+
+    @property
+    def all_pages(self):
+        if self.pages:
+            return self.pages.split("\n")
+        else:
+            return []
 
     def __str__(self):
         return self.name
@@ -154,7 +163,7 @@ class Block(BaseBlock):
 
 class Region(models.Model):
     name = models.CharField(max_length=255)
-    blocks = models.ManyToManyField(BaseBlock)
+    blocks = models.ManyToManyField(BaseBlock, blank=True)
 
     def __str__(self):
         return self.name

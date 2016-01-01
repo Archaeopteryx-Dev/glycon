@@ -3,6 +3,7 @@
 from django.db import models
 
 from glycon.models import BaseContent, BaseBlock
+from glycon_summaries.views import summary_block_html
 
 
 class BaseSummary(models.Model):
@@ -28,7 +29,9 @@ class Summary(BaseSummary, BaseContent):
 
 class SummaryBlock(BaseSummary, BaseBlock):
 
-
+    @property
+    def content(self):
+        return summary_block_html(self)
 
     def __str__(self):
         return self.name

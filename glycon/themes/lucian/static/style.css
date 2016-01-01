@@ -2,6 +2,13 @@
 margin: 0px;
 }
 
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+}
+
 #header {
     background: #064771;
     color: white;
@@ -57,6 +64,12 @@ iframe {
     margin: 10px;
 }
 
+#article {
+    min-height: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 #main-middle-bottom {
     background: #e9e9e9;
     text-align: left;
@@ -75,6 +88,10 @@ iframe {
     float: left;
     width: 33%;
     height: 500px;
+}
+
+#main-right-bottom:empty {
+    display: None;
 }
 
 #top {

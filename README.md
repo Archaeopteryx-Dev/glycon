@@ -59,11 +59,11 @@ From functions required for glycon home site:
 * Menu blocks - add menus to blocks DONE
 * Theme system - part of glycon core DONE
 * Add a summary block to glycon_summaries
-* Add configurable elements to a Theme (colours, background (upload to media), favicon (upload to media) etc.)
+* Add configurable elements to a Theme (colours, background (upload to media), favicon (upload to media) etc.) DONE
 * Multi-site config DONE
-* Finalise the Alexander and Lucian themes PARTIALLY DONE
+* Finalise the Alexander and Lucian themes CURRENT WORK
 * Override the main admin index to describe the features of each class of the Glycon system, and add links etc. DONE
-* Ensure themes pick up images from the correct media root
+* Add filtering for blocks by url DONE
 
 Then add four more new modules:
 
@@ -76,6 +76,7 @@ Then we'll launch the Glycon web site, and create a video to show how to install
 
 v0.3 - Features
 
+* Autosave page / block type
 * Add a script to /bin to do a full install of a Glycon CMS, including Django setup. 
 * User logins - Admin, Editor, User.
 * Permissions model for elements - lots of abstraction - use a decorator?
