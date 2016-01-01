@@ -61,7 +61,7 @@ From functions required for glycon home site:
 * Add a summary block to glycon_summaries
 * Add configurable elements to a Theme (colours, background (upload to media), favicon (upload to media) etc.) DONE
 * Multi-site config DONE
-* Finalise the Alexander and Lucian themes CURRENT WORK
+* Finalise the Alexander and Lucian themes DONE
 * Override the main admin index to describe the features of each class of the Glycon system, and add links etc. DONE
 * Add filtering for blocks by url DONE
 
