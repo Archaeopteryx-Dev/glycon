@@ -29,8 +29,7 @@ class Summary(BaseSummary, BaseContent):
 
 class SummaryBlock(BaseSummary, BaseBlock):
 
-    @property
-    def content(self):
+    def content(self, request=None):
         return summary_block_html(self)
 
     def __str__(self):

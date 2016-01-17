@@ -22,15 +22,9 @@
         </ul>
     </div>
 
-    <div id="disqus_thread">
-        <noscript>
-            <p>
-                <a href="http://bencollier.disqus.com/?url=http%3A%2F%2Fwww.bencollier.info%2Fcontent%2Fgetting-yellow-river-kingdom-working-risc-os-pico">
-                    View the discussion thread.
-                </a>
-            </p>
-        </noscript>
-    </div>
+            {% for block in regions.main %}
+                <p>{{ block }}</p>
+            {% endfor %}
 
 </div>
 

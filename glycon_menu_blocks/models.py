@@ -10,8 +10,7 @@ class MenuBlock(BaseBlock):
 
     menu = models.ForeignKey(Menu)
 
-    @property
-    def content(self):
+    def content(self, request=None):
         return menu_block_html(self.menu.name)
 
     def __str__(self):

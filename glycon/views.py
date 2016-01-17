@@ -42,7 +42,7 @@ def content(request, page_name):
         regions[region.name] = blocks
 
     template = "{}.html".format(contents.content_type.lower())
-    menu = MenuItem.objects.filter(menu__name="Main")
+    menu = MenuItem.objects.filter(menu__name="Main").order_by('weight', 'short_name')
     current_site = Site.objects.get_current().id
     logo = SiteConfiguration.objects.get(site__id=current_site).theme.logo_image
     return render(request, template, dict(

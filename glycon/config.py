@@ -1,6 +1,7 @@
 from glycon.models import Page, Article, Block
 from glycon_summaries.models import Summary, SummaryBlock
 from glycon_menu_blocks.models import MenuBlock
+from glycon_disqus.models import DisqusBlock
 
 SITENAME = "Ben Collier"
 GLYCON_MEDIA_URL = "/media/"
@@ -16,5 +17,6 @@ CONTENT_TYPES = {
 BLOCK_TYPES = {
     "Block": Block,
     "SummaryBlock": SummaryBlock,
-    "MenuBlock": MenuBlock
+    "MenuBlock": MenuBlock,
+    "DisqusBlock": DisqusBlock
 }

@@ -9,13 +9,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='glycon',
-    version='0.1.0.4',
+    version='0.2.0',
     packages=['glycon', 'glycon_menu_blocks', 'glycon_summaries'],
     include_package_data=True,
     license='GPL v3',
     description='A Django-based CMS.',
     long_description='README.md',
-    url='http://www.bencollier.info/',
+    url='http://www.glycon.org/',
     author='Ben Collier',
     author_email='bmcollier@gmail.com',
     scripts=['bin/glycon-setup.py'],
@@ -29,8 +29,8 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
-	    'Programming Language :: Python :: 3.4',
-        'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-    ],
+	'Programming Language :: Python :: 3.4',
+	'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+	'Topic :: Internet :: WWW/HTTP',
+   ],
 )

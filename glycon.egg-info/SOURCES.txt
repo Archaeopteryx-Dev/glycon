@@ -42,12 +42,15 @@ glycon/themes/lucian/templates/disqus.html
 glycon/themes/lucian/templates/footer.html
 glycon/themes/lucian/templates/header.html
 glycon/themes/lucian/templates/home.html
+glycon/themes/lucian/templates/left-sidebar.html
 glycon/themes/lucian/templates/mainmenu.html
 glycon/themes/lucian/templates/metatags.html
 glycon/themes/lucian/templates/page.html
+glycon/themes/lucian/templates/right-sidebar.html
 glycon/themes/lucian/templates/sidebar.html
 glycon/themes/lucian/templates/twitter.html
 glycon/themes/lucian/templates/welcome.html
+glycon_menu_blocks/__init__.py
 glycon_menu_blocks/admin.py
 glycon_menu_blocks/models.py
 glycon_menu_blocks/views.py
@@ -58,3 +61,4 @@ glycon_summaries/models.py
 glycon_summaries/tests.py
 glycon_summaries/views.py
 glycon_summaries/templates/summary.html
+glycon_summaries/templates/summaryblock.html
