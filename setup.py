@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='glycon',
-    version='0.2.0',
+    version='0.2.1',
     packages=['glycon', 'glycon_menu_blocks', 'glycon_summaries'],
     include_package_data=True,
     license='GPL v3',
